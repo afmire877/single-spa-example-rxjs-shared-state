@@ -1,0 +1,71 @@
+{ 
+    "id": "611b92c57498cd363b7296b9" ,
+    "consumerId" : "610a680f95ea361eb643c983", 
+    "baseUrl" : "https://ahmed-cwis-soft-bank.eu.ngrok.io", 
+    "widgetBaseUrl" : "https://ahmed-widget.eu.ngrok.io", 
+    "name" : "soft-bank", 
+    "clientApiName" : "iframe", 
+    "integrationType" : "browser", 
+    "paymentGateway" : "softbank", 
+    "hmac" : {
+        "allowUnsigned" : false, 
+        "audience" : "urn:local:cwis-soft-bank", 
+        "privateKey" : "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1DNENBUUF3QlFZREsyVndCQ0lFSVBIbFdDVHhJNEhtbWpUYkNua2s5ZEtwNG5SQ1lhUVJWZnAvSktTaWFyejgKLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLQo=", 
+        "publicKey" : "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUNvd0JRWURLMlZ3QXlFQWVMLzRDeDZuT0xCbVM1V0Jqb2ptdklFUDZJODd0bkowWk9Oa2RWZ0tVNDQ9Ci0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQo=", 
+        "subject" : "urn:local:widget-sdk"
+    }, 
+    "features" : {
+        "canAddPaymentMethods" : true, 
+        "disableSplytTos" : true, 
+        "enableAddPhoneNumber" : true, 
+        "enableFavourites" : true, 
+        "enableOneCharacterAddressSearch" : false, 
+        "enablePrebooking" : true, 
+        "enableSendReceipt" : true, 
+        "enableSupport" : true, 
+        "enableTooltip" : true, 
+        "multiplePaymentMethods" : true, 
+        "showWelcomeModal" : true, 
+        "userLevelPaymentsToken" : false, 
+        "showLocalisedDates" : true, 
+        "enablePromos" : true, 
+        "complianceConfirmation" : true
+    }, 
+    "salesTax" : 10.0, 
+    "preauthMultiplier" : 1.0, 
+    "bookingIssueToEmail" : "ahmed.mire@splyt.com", 
+    "bookingIssueCCEmail" : "ahmed.mire@splyt.com", 
+    "bookingIssuePhone" : "+441234567890", 
+    "requiresOAuth" : false, 
+    "authHeaderCacheTimeout" : 7200.0, 
+    "markup" : 0.0, 
+    "defaultLocale" : "ja", 
+    "validLocales" : [
+
+    ], 
+    "headers" : {
+
+    }, 
+    "cancellationLimits" : {
+        "preDriverAssigned" : {
+            "limit" : 20.0, 
+            "perMinutes" : 1.0
+        }, 
+        "postDriverAssigned" : {
+            "limit" : 20.0, 
+            "perMinutes" : 1.0
+        }
+    }, 
+    "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoaWQiOiJXaWRnZXQgV2ViIC0gQWhtZWQiLCJpYXQiOjE2MjkxOTUzMzgsImF1ZCI6InJlc3RhcGkiLCJpc3MiOiJ1cm46cWEiLCJzdWIiOiJ1cm46cGFydG5lcjo2MTBhNjgwZjk1ZWEzNjFlYjY0M2M5ODMiLCJqdGkiOiJjdDdRbHZ2MEpaeWxXR2RtOGZqUmZLTXVDcTBKSkMyUGNTMjNUakdGM3QwPSJ9.tGXJfIlYwtWAuD3__-r7wIZfsTXQwDkWfMsWiZY1XbU", 
+    "analyticsServices" : {
+        "woopra" : {
+            "enabled" : false, 
+            "domain" : "ahmed-widget.eu.ngrok.io"
+        }, 
+        "gtm" : {
+            "enabled" : false, 
+            "id" : "random"
+        }
+    }, 
+    "debugMode" : true
+}

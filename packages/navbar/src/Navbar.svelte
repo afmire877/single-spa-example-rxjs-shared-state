@@ -2,14 +2,19 @@
   import { onDestroy, onMount } from "svelte";
   import { Router, navigate } from "svelte-routing";
   import { auth$ as auth, logout } from "@example/auth";
+  import { isMenuOpen } from './store'
 
   const ROUTES = {
     LOGIN: "/login",
     HOME: "/home",
   };
 
-  let sub;
+  let sub;  
+  let isOpen;
+  
   onMount(() => {
+    document.addEventListener('openMenu', () => isOpen = true);
+
     sub = auth.subscribe(({ sessionToken }) => {
       const needsLogin = !sessionToken;
       if (needsLogin) navigate(ROUTES.LOGIN);
@@ -21,13 +26,14 @@
 
   onDestroy(() => {
     sub.unsubscribe();
+    document.addEventListener('openMenu');
   });
 </script>
 
 <nav>
   <Router>
+    <span>{#if !isOpen } Menu are Closed {:else} Menu is Open {/if} </span>
     {#if $auth.sessionToken}
-      <span>Welcome!</span>
       <button class="action" type="button" on:click|once={logout}>Logout</button
       >
     {:else}<span>Login</span>{/if}

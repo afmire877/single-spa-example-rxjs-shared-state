@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { auth$, login } from "@example/auth";
 import Loader from "./loader.component";
+import { openMenu } from "@example/client"
 
 export default function Root(props) {
   const [pending, setPending] = useState(false);
@@ -39,9 +40,13 @@ export default function Root(props) {
           <button type="submit" className="submit" disabled={pending}>
             {pending ? <Loader /> : "Submit"}
           </button>
+     
         </div>
         {error && <div className="login-error">{error}</div>}
       </form>
+      <button className="submit" onClick={() => openMenu()}>
+        Open Menu
+      </button>
     </div>
   );
 }
