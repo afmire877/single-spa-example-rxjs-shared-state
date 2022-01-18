@@ -1,5 +1,3 @@
-import config from "../../../mock/widget-config.json"
-
 
 export const openMenu = () => {
   document.dispatchEvent(new CustomEvent('openMenu'));
